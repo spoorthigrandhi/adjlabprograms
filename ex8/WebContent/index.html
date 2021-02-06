@@ -1,0 +1,65 @@
+<html>
+<head>
+<TITLE>Registration</TITLE>
+</head>
+<body>
+<form action="./Registration.jsp" method="post">
+<script type="text/javascript">
+function getData(){
+	var name = document.forms["f1"].elements["name"].value;
+	if(name == "") {
+		alert("Please enter name");
+	}
+	var password = document.getElementById("password").value;
+	if(password == "") {
+		alert("Please enter password");
+	}
+	else if(password.length < 6) {
+		alert("Password should contain atleast 6 characters")
+	}
+	var email = document.getElementById("email").value;
+	if(email == ""){
+		alert("Please enter email id");
+	}
+	var phno = document.getElementById("phno").value;
+	if(phno == ""){
+		alert("Please enter phno");
+	}
+	}
+</script>
+</head>
+<body>
+<center>
+<h1>Registration Form</h1>
+<form name="f1">
+<table>
+<tr>
+<td>Name</td>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" id="password"></td>
+</tr>
+<tr>
+<td>Email id</td>
+<td><input type="text" name="email"></td>
+</tr>
+<tr>
+<td>Phone Number</td>
+<td><input type="text" name="phno" maxlength="10"></td>
+</tr>
+
+<td colspan="2">
+<input type="button" value="Validate" onclick="getData()"> &nbsp&nbsp
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+
+
